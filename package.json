@@ -1,0 +1,32 @@
+{
+  "name": "OfficeFood",
+  "version": "0.0.1",
+  "description": "Daily menu application",
+  "author": "balazsburi",
+  "dependencies": {
+    "express": "3.0.x",
+    "grunt": "~0.4.1"
+  },
+  "engine": "node >= 0.6.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danielkocsan/angularExample.git"
+  },
+  "keywords": [
+    "daily",
+    "menu"
+  ],
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/danielkocsan/angularExample/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}

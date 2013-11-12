@@ -1,0 +1,116 @@
+[
+    {
+        "restaurant": {
+            "name": "Trinakria",
+            "coordinates": {
+                "longitude": "47.48606,19.07384",
+                "lattitude": "47.4858,19.074308"
+            },
+            "city": "Budapest",
+            "streetAddress": "Vajdahunyad utca 42",
+            "phone": "+36207708299",
+            "postcode": 1082,
+            "logos": {
+                "m": "medium/trinakria.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "A menü",
+                "price": {
+                    "amount": "900",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Zöldbableves"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Négysajtos csirke hasábburgonyával"
+                    }
+                ]
+            },
+            {
+                "name": "B menü",
+                "price": {
+                    "amount": "900",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Zöldbableves"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Rántott karfiol hagymás burgonyával"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "name": "10 Minutes",
+            "city": "Budapest",
+            "streetAddress": "Futó utca 47.",
+            "phone": "+36207708299",
+            "postcode": 1082,
+            "logos": {
+                "m": "medium/10minutes.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "Menü",
+                "price": {
+                    "amount": "850",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Csontleves cérnametélttel"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Budapesti csirketokány párolt rízzsel"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "name": "Kompót bisztró",
+            "city": "Budapest",
+            "streetAddress": "Corvin sétány 1/B",
+            "phone": "+36207708299",
+            "postcode": 1082,
+            "logos": {
+                "m": "medium/kompot.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "Menü",
+                "price": {
+                    "amount": "990",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Grillezett jégsaláta baconnal és zöldfűszeres tejföllel"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Vörösboros pincepörkölt"
+                    }
+                ]
+            }
+        ]
+    }
+]

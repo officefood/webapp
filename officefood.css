@@ -1,0 +1,44 @@
+body {
+  background: #69c;
+}
+
+.panel {
+  background: transparent;
+  border: none;
+}
+
+.pricing-table {
+  border: none;
+}
+
+.pricing-table .title {
+  margin: 1.5em 0 -.4em 0;
+  float: left;
+  border: 1px solid #454545;
+  border-bottom: none;
+  border-radius: .5em .5em 0 0;
+  padding: .875em 2em 0em;
+  background: #fff;
+  clear: both;
+  overflow: hidden;
+  box-shadow: 2px -3px 3px rgba(0,0,0,.2);
+}
+
+.pricing-table > li:first-child h2 {
+  margin-top: 0;
+}
+
+.pricing-table .info {
+  clear: both;
+  border: 1px solid #454545;
+  border-radius: 0 .5em .5em .5em;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 2px -3px 3px rgba(0,0,0,.2);
+}
+
+.currency {
+  font-size: .75em;
+  margin: 0 .375em;
+  color: #999;
+}

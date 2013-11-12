@@ -1,0 +1,123 @@
+body, html, ul, li, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Carrois Gothic SC', sans-serif;
+    color: #333333;
+    padding-top: 2em;
+    background-color: #101600;
+}
+
+ul {
+    list-style: none;
+}
+
+.content {
+
+}
+
+h1, h3 {
+    display: inline;
+    color: #ffffff;
+}
+
+h1 {
+    padding: .5em;
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.5em;
+    padding: 0 .25em;
+    color: #72a200;
+    line-height: 1;
+    border-bottom: 1px solid #101600;
+}
+h5 {
+    font-size: 1.5em;
+    line-height: 1em;
+    font-weight: normal;
+    padding: .25em .5em;
+    margin: .5em 0;
+    font-family: arial;
+}
+
+.restaurant {
+    background-color: #ffffff;
+    padding: 1em .5em;
+    margin: 2em 0;
+}
+
+.course {
+    clear: both;
+    margin-top: 1em;
+    background-color: #ffffff;
+}
+.course:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+.dish, .price {
+    float: left;
+}
+.dish {
+    width: 66.667%;
+}
+.price {
+    text-align: center;
+    font-size: 3.5em;
+    background-color: #72a200;
+    margin: .5em 0;
+    padding: .25em .5em;
+    color: #ffffff;
+}
+.currency {
+    font-size: .5em;
+}
+
+.logo {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin: 0 .5em 1em 0; 
+    border: 1px solid #e1e1e1;
+    background-color: #eeeeee;
+}
+
+.border {
+    border: 1px solid #e3e3e3;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background: #dadedd;
+    border: 1px solid #e1e1e1;
+    line-height: 2em;
+    padding: 0 .5em;
+    color: #333333;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.button.info {
+    background-color: #ffffff;
+    color: #72a200;
+    border: 1px solid #72a200;
+}
+
+.rounded {
+    border-radius: 3px;
+}
