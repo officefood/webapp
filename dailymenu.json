@@ -1,6 +1,7 @@
 [
     {
         "restaurant": {
+            "seoName": "trinakria",
             "name": "Trinakria",
             "coordinates": {
                 "longitude": "47.48606,19.07384",
@@ -53,6 +54,7 @@
     },
     {
         "restaurant": {
+            "seoName": "10minutes",
             "name": "10 Minutes",
             "city": "Budapest",
             "streetAddress": "Futó utca 47.",
@@ -84,6 +86,7 @@
     },
     {
         "restaurant": {
+            "seoName": "kompotbisztro",
             "name": "Kompót bisztró",
             "city": "Budapest",
             "streetAddress": "Corvin sétány 1/B",

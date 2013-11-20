@@ -18,14 +18,20 @@
             <span class="appName" itemprop="name">Officefood</span>
             <h1 itemprop="description">Napi menü - Október 30</h1>
         </header>
-<<<<<<< HEAD
-        <section class="restaurant" ng-repeat="item in menu" itemscope itemtype="http://schema.org/Restaurant">
-            <div class="logo rounded border"><img ng-src="http://placehold.it/120x120" alt="{{item.restaurant.name}} - logo"/></div>
-=======
-        <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
-        <section class="restaurant" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope itemtype="http://schema.org/Restaurant">
+
+        <aside>
+            <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
+            <nav ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">
+                <!-- ngRepeat: item in filteredMenu = (menu | filter:searchRestaurant) -->
+                <a href="#{{item.restaurant.seoName}}">{{item.restaurant.name}}</a>
+            </nav>
+        </aside>
+
+
+
+        <section id="{{item.restaurant.seoName}}" class="restaurant" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope itemtype="http://schema.org/Restaurant">
             <div class="logo rounded border"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
->>>>>>> e26da076838eb2959bc0938de18a8c37d3f886e6
+
             <div class="restaurantInfo">
                 <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
                 <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
