@@ -17,6 +17,10 @@ body {
 .mainHeader h1 {
   font-weight: bold;
 }
+.restaurants {
+  left: 20%;
+  position: absolute;
+}
 .priceTag {
   background-color: #588d92;
   border-radius: 0 .3em .3em 0;
@@ -147,10 +151,10 @@ body {
   content: "";
 }
 .searchRestaurant {
-  margin: 1em 0.75em 1em 0.75em;
+  margin: 1em 5%;
   /* 16px -> 1em, 12px -> 0.75 */
 
-  width: 95%;
+  width: 80%;
   padding: 10px 5px;
   font-size: 0.875em;
   font-weight: bold;
@@ -160,4 +164,10 @@ body {
 .searchRestaurant:focus {
   outline: 0;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.8) inset;
+}
+aside {
+  position: absolute;
+  width: 20%;
+  background-color: #605048;
+  height: 100%;
 }

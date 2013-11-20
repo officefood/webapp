@@ -1,70 +1,82 @@
 <!doctype html>
 <html ng-app>
-    <head>
-        <title>Officefood</title>
-        <meta name="description" content="A Covin negyed környező éttermeinek napi menükínálata" />
-        <meta name="keywords" content="menü, napimenü, hetimenü, étterem ajánlat" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
-        <script type="text/javascript" src="menuController.js"></script>
-        <script type="text/javascript" src="tipController.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Ubuntu:400italic' rel='stylesheet' type='text/css'>
-        <link href="css/reset.css" rel="stylesheet" type="text/css">
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-    </head>
-    <body ng-controller="MenuController" itemscope itemtype="http://schema.org/WebPage">
-        <header class="mainHeader">
-            <span class="appName" itemprop="name">Officefood</span>
-            <h1 itemprop="description">Napi menü - Október 30</h1>
-        </header>
+<head>
+    <title>Officefood</title>
+    <meta name="description" content="A Covin negyed környező éttermeinek napi menükínálata"/>
+    <meta name="keywords" content="menü, napimenü, hetimenü, étterem ajánlat"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
+    <script type="text/javascript" src="menuController.js"></script>
+    <script type="text/javascript" src="tipController.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400italic' rel='stylesheet' type='text/css'>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body ng-controller="MenuController" itemscope itemtype="http://schema.org/WebPage">
+<header class="mainHeader">
+    <span class="appName" itemprop="name">Officefood</span>
 
-        <aside>
-            <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
-            <nav ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">
-                <!-- ngRepeat: item in filteredMenu = (menu | filter:searchRestaurant) -->
-                <a href="#{{item.restaurant.seoName}}">{{item.restaurant.name}}</a>
-            </nav>
-        </aside>
+    <h1 itemprop="description">Napi menü - Október 30</h1>
+</header>
+
+<aside>
+    <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
+    <nav ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">
+        <!-- ngRepeat: item in filteredMenu = (menu | filter:searchRestaurant) -->
+        <a href="#{{item.restaurant.seoName}}">{{item.restaurant.name}}</a>
+    </nav>
+</aside>
 
 
+<div class="restaurants">
+    <section id="{{item.restaurant.seoName}}" class="restaurant"
+             ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope
+             itemtype="http://schema.org/Restaurant">
+        <div class="logo rounded border"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}"
+                                              alt="{{item.restaurant.name}} - logo"/></div>
 
-        <section id="{{item.restaurant.seoName}}" class="restaurant" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope itemtype="http://schema.org/Restaurant">
-            <div class="logo rounded border"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
-
-            <div class="restaurantInfo">
-                <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
-                <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <a class="location" href="#">
-                        <span class="city" itemprop="addressLocality">{{item.restaurant.city}}</span>
-                        <span class="streetAddress" itemprop="streetAddress">{{item.restaurant.streetAddress}}</span>
-                    </a>
-                    <a class="phoneNumber" href="tel:{{item.restaurant.phone}}" itemprop="telephone">{{item.restaurant.phone}}</a>
-                </address>
+        <div class="restaurantInfo">
+            <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
+            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <a class="location" href="#">
+                    <span class="city" itemprop="addressLocality">{{item.restaurant.city}}</span>
+                    <span class="streetAddress" itemprop="streetAddress">{{item.restaurant.streetAddress}}</span>
+                </a>
+                <a class="phoneNumber" href="tel:{{item.restaurant.phone}}" itemprop="telephone">{{item.restaurant.phone}}</a>
+            </address>
+        </div>
+        <section class="course" ng-repeat="course in item.menus">
+            <header class="courseName">{{course.name}}</header>
+            <ol class="dishes">
+                <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>
+            </ol>
+            <div class="priceTag">{{course.price.amount}}<span class="currency">{{course.price.currency}}</span></div>
+        </section
+        <section ng-controller="TipController">
+            <div ng-repeat="tip in tips.items">
+                huha
             </div>
-            <section class="course" ng-repeat="course in item.menus">
-                <header class="courseName">{{course.name}}</header>
-                <ol class="dishes">
-                    <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>    
-                </ol>
-                <div class="priceTag">{{course.price.amount}}<span class="currency">{{course.price.currency}}</span></div>
-            </section
-            <section ng-controller="TipController">
-                <div ng-repeat="tip in tips.items">
-                    huha
-                </div>
-            </section>
         </section>
-        <h2 ng-show="!filteredMenu.length">Nincs találat</h2>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        
-          ga('create', 'UA-45498742-1', 'officefood.hu');
-          ga('send', 'pageview');
-        
-        </script>
-    </body>
+    </section>
+</div>
+<h2 ng-show="!filteredMenu.length">Nincs találat</h2>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-45498742-1', 'officefood.hu');
+    ga('send', 'pageview');
+
+</script>
+</body>
 </html>

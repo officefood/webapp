@@ -14,182 +14,194 @@
 /*   S T Y L E S    */
 
 body {
-    font-family: 'Helvetica', 'arial', sans-serif;
-    background-color: @backgroundLight;
+  font-family: 'Helvetica', 'arial', sans-serif;
+  background-color: @backgroundLight;
 }
 
 .appName {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 2.5em;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5em;
 }
 
 .mainHeader {
-    background-color: @backgroundDark;
-    border-bottom: 2px solid #f3945f;
-    color: @headingColor;
-    padding: 0.75em;
-    
-    h1 {
-        font-weight: bold;
-    }
+  background-color: @backgroundDark;
+  border-bottom: 2px solid #f3945f;
+  color: @headingColor;
+  padding: 0.75em;
+
+  h1 {
+    font-weight: bold;
+  }
+}
+
+.restaurants {
+  left: 20%;
+  position: absolute;
 }
 
 .priceTag {
-    background-color: @priceLabelBackground;
-    border-radius: 0 .3em .3em 0;
-    color: @priceLabelFont;
-    padding: .5em 1em;
-    position: relative;
-    float: right;
-    margin: .5em;
-    box-shadow: 1px 0px 3px 0 rgba(0,0,0,.3);
+  background-color: @priceLabelBackground;
+  border-radius: 0 .3em .3em 0;
+  color: @priceLabelFont;
+  padding: .5em 1em;
+  position: relative;
+  float: right;
+  margin: .5em;
+  box-shadow: 1px 0px 3px 0 rgba(0, 0, 0, .3);
 }
+
 .priceTag:before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: -1em;
-    height: 0;
-    width: 0;
-    border-top: 1em solid transparent;
-    border-bottom: 1em solid transparent;
-    border-right: 1em solid @priceLabelBackground;
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -1em;
+  height: 0;
+  width: 0;
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-right: 1em solid @priceLabelBackground;
 }
 
 .priceTag:after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: .3em;
-    width: .3em;
-    border-radius: 50%;
-    border: 1px solid @backgroundDark;
-    background-color: @backgroundLight;
-    top: 50%;
-    left: 0;
-    margin-top: -.15em;
-    margin-left: -.15em;
-    box-shadow: 0 0 0 .7px rgba(0,0,0,.4);
+  content: '';
+  display: block;
+  position: absolute;
+  height: .3em;
+  width: .3em;
+  border-radius: 50%;
+  border: 1px solid @backgroundDark;
+  background-color: @backgroundLight;
+  top: 50%;
+  left: 0;
+  margin-top: -.15em;
+  margin-left: -.15em;
+  box-shadow: 0 0 0 .7px rgba(0, 0, 0, .4);
 }
 
 .restaurant {
-    background-color: #fff;
-    box-shadow: 3px 4px 4px rgba(0,0,0,.1);
-    border: 1px solid #e7e7e7;
-    margin: 1em 0.75em 1em 0.75em; /* 16px -> 1em, 12px -> 0.75 */
-    padding: 0.875em; /* 14px / 16px */
+  background-color: #fff;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, .1);
+  border: 1px solid #e7e7e7;
+  margin: 1em 0.75em 1em 0.75em; /* 16px -> 1em, 12px -> 0.75 */
+  padding: 0.875em; /* 14px / 16px */
+  clear: both;
+
+  &:after {
+    content: '';
+    display: block;
     clear: both;
-    
-    &:after {
-        content: '';
-        display: block;
-        clear: both;
+  }
+
+  .logo {
+    float: left;
+    width: 29%;
+    margin-right: 4.5%;
+    max-width: 120px;
+
+    img {
+      max-width: 100%;
+      margin-bottom: 1em;
     }
-    
-    .logo {
-        float: left;
-        width: 29%;
-        margin-right: 4.5%;
-        max-width: 120px;
-        
-        img {
-            max-width: 100%;
-            margin-bottom: 1em;
-        }
+  }
+
+  .restaurantInfo {
+    color: @restaurantInfo;
+  }
+
+  .restaurantInfo a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .restaurantName {
+    color: @restaurantName;
+    font-weight: bold;
+    font-size: 1.5em; /* 24/16 */
+    letter-spacing: -1px;
+  }
+
+  .course {
+    clear: both;
+    margin-bottom: 10%;
+  }
+
+  .courseName {
+    font-size: 0.875em;
+    font-weight: bold;
+    color: @courseNameColor;
+    border-bottom: 0.2857em solid @courseNameColor;
+    margin-bottom: 0.625em;
+    padding: (10/16em) 0;
+  }
+
+  .dishes {
+    font-size: 0.875em;
+    font-weight: bold;
+  }
+
+  .dish {
+    margin: 0.3em 0;
+    line-height: 1.2;
+  }
+
+  .priceTag {
+    background-color: @priceLabelBackground;
+
+  }
+
+  address {
+    font-size: 0.75em; /* 16px -> 1em, 12px -> 0.75 */
+
+    .location,
+    .phoneNumber {
+      display: block;
     }
-    
-    .restaurantInfo {
-        color: @restaurantInfo;
+
+    .location {
+      margin-bottom: 0.5em;
     }
-    
-    .restaurantInfo a {
-        color: inherit;
-        text-decoration: none;
+
+    .location:before {
+      background: url(../img/officefood_sprite.png);
+      display: inline-block;
+      width: 11px;
+      height: 17px;
+      background-position: 0 -14px;
+      content: "";
     }
-    
-    .restaurantName {
-        color: @restaurantName;
-        font-weight: bold;
-        font-size: 1.5em; /* 24/16 */
-        letter-spacing: -1px;
+
+    .phoneNumber:before {
+      background: url(../img/officefood_sprite.png);
+      display: inline-block;
+      width: 16px;
+      height: 12px;
+      content: "";
     }
-    
-    .course {
-        clear: both;
-        margin-bottom: 10%;
-    }
-    
-    .courseName {
-        font-size: 0.875em;
-        font-weight: bold;
-        color: @courseNameColor;
-        border-bottom: 0.2857em solid @courseNameColor;
-        margin-bottom: 0.625em;
-        padding: (10/16em) 0;
-    }
-    
-    .dishes {
-        font-size: 0.875em;
-        font-weight: bold;
-    }
-    
-    .dish {
-        margin: 0.3em 0;
-        line-height: 1.2;
-    }
-    
-    .priceTag {
-        background-color: @priceLabelBackground;
-        
-    }
-    
-    address {
-        font-size: 0.75em; /* 16px -> 1em, 12px -> 0.75 */
-        
-        .location,
-        .phoneNumber {
-            display: block;
-        }
-        
-        .location {
-            margin-bottom: 0.5em;
-        }
-        
-        .location:before {
-                background: url(../img/officefood_sprite.png);
-                display: inline-block;
-                width: 11px;
-                height: 17px;
-                background-position: 0 -14px;
-                content: "";
-        }
-        
-        .phoneNumber:before {
-                background: url(../img/officefood_sprite.png);
-                display: inline-block;
-                width: 16px;
-                height: 12px;
-                content: "";
-        }
-        
-        
-    }
+
+  }
 }
 
 .searchRestaurant {
-    margin: 1em 0.75em 1em 0.75em; /* 16px -> 1em, 12px -> 0.75 */
-    width: 95%;
-    padding: 10px 5px;
-    font-size: 0.875em;
-    font-weight: bold;
-    border: 0;
-    border-radius: 10px;
-    
-    &:focus {
-        outline: 0;
-        box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
-    }
+  margin: 1em 5%; /* 16px -> 1em, 12px -> 0.75 */
+  width: 80%;
+  padding: 10px 5px;
+  font-size: 0.875em;
+  font-weight: bold;
+  border: 0;
+  border-radius: 10px;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+  }
+}
+
+aside {
+  position: absolute;
+  width: 20%;
+  background-color: @backgroundDark;
+  height: 100%;
 }
 
 
