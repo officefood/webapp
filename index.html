@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width" />
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
         <script type="text/javascript" src="menuController.js"></script>
+        <script type="text/javascript" src="tipController.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Ubuntu:400italic' rel='stylesheet' type='text/css'>
         <link href="css/reset.css" rel="stylesheet" type="text/css">
         <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -17,8 +18,14 @@
             <span class="appName" itemprop="name">Officefood</span>
             <h1 itemprop="description">Napi menü - Október 30</h1>
         </header>
+<<<<<<< HEAD
         <section class="restaurant" ng-repeat="item in menu" itemscope itemtype="http://schema.org/Restaurant">
+            <div class="logo rounded border"><img ng-src="http://placehold.it/120x120" alt="{{item.restaurant.name}} - logo"/></div>
+=======
+        <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
+        <section class="restaurant" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope itemtype="http://schema.org/Restaurant">
             <div class="logo rounded border"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
+>>>>>>> e26da076838eb2959bc0938de18a8c37d3f886e6
             <div class="restaurantInfo">
                 <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
                 <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -35,8 +42,14 @@
                     <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>    
                 </ol>
                 <div class="priceTag">{{course.price.amount}}<span class="currency">{{course.price.currency}}</span></div>
+            </section
+            <section ng-controller="TipController">
+                <div ng-repeat="tip in tips.items">
+                    huha
+                </div>
             </section>
         </section>
+        <h2 ng-show="!filteredMenu.length">Nincs találat</h2>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
