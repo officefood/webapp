@@ -64,10 +64,8 @@ body {
   border: 1px solid #e7e7e7;
   margin: 1em 0.75em 1em 0.75em;
   /* 16px -> 1em, 12px -> 0.75 */
-
   padding: 0.875em;
   /* 14px / 16px */
-
   clear: both;
 }
 .restaurant:after {
@@ -97,7 +95,6 @@ body {
   font-weight: bold;
   font-size: 1.5em;
   /* 24/16 */
-
   letter-spacing: -1px;
 }
 .restaurant .course {
@@ -126,7 +123,6 @@ body {
 .restaurant address {
   font-size: 0.75em;
   /* 16px -> 1em, 12px -> 0.75 */
-
 }
 .restaurant address .location,
 .restaurant address .phoneNumber {
@@ -153,13 +149,13 @@ body {
 .searchRestaurant {
   margin: 1em 5%;
   /* 16px -> 1em, 12px -> 0.75 */
-
   width: 80%;
   padding: 10px 5px;
   font-size: 0.875em;
   font-weight: bold;
   border: 0;
   border-radius: 10px;
+  color: #777777;
 }
 .searchRestaurant:focus {
   outline: 0;
