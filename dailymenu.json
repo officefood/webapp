@@ -159,5 +159,429 @@
                 ]
             }
         ]
+    },
+    {
+        "restaurant": {
+            "seoName": "mangacowboy",
+            "name": "Manga Cowboy",
+            "location" : {
+               "lat" : 47.4851967,
+               "lng" : 19.064546
+            },
+            "city": "Budapest",
+            "streetAddress": "Ráday utca 33.",
+            "phone": "+361 215 1119",
+            "postcode": 1092,
+            "logos": {
+                "m": "medium/mangacowboy.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "A Menü",
+                "price": {
+                    "amount": "890",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Frankfurti leves"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Pirított csirkemáj, főtt burgonya"
+                    }
+                ]
+            },
+            {
+                "name": "B Menü",
+                "price": {
+                    "amount": "1090",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Frankfurti leves"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Muszaka"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "seoName": "trattoria-etterem-cafe",
+            "name": "Trattoria Étterem & Cafe",
+            "location" : {
+               "lat" : 47.4874635,
+               "lng" : 19.0632135
+            },
+            "city": "Budapest",
+            "streetAddress": "Ráday utca 16.",
+            "phone": "+361 215 2888",
+            "postcode": 1092,
+            "logos": {
+                "m": "medium/trattoria.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "A Menü",
+                "price": {
+                    "amount": "990",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Húsleves gazdagon"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Párizsi szelet petrezselymes jázmin rizzsel"
+                    }
+                ]
+            },
+            {
+                "name": "B Menü",
+                "price": {
+                    "amount": "990",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Hideg gyümölcsleves"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Pulykabrassói csalamádéval"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "seoName": "matyas-pince-etterem",
+            "name": "Mátyás Pince Étterem",
+            "location" : {
+               "lat" : 47.49146200000001,
+               "lng" : 19.052907
+            },
+            "city": "Budapest",
+            "streetAddress": "Március 15. tér 7.",
+            "phone": "+361 266 8008",
+            "postcode": 1056,
+            "logos": {
+                "m": "medium/matyas.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "A Menü",
+                "price": {
+                    "amount": "990",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "main",
+                        "title": "Vadas marha zsemlegombóccal"
+                    },
+                    {
+                        "type": "dessert",
+                        "title": "Meggyes rétes"
+                    }
+                ]
+            },
+            {
+                "name": "B Menü",
+                "price": {
+                    "amount": "990",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "main",
+                        "title": "Vad erőleves zöldség szalmával"
+                    },
+                    {
+                        "type": "dessert",
+                        "title": "Milánói sertésborda"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "seoName": "kek-rozsa-etterem",
+            "name": "Kék Rózsa étterem",
+            "location" : {
+               "lat" : 47.4967785,
+               "lng" : 19.0615448
+            },
+            "city": "Budapest",
+            "streetAddress": "Wesselényi utca 9.",
+            "phone": "+361 342 8981",
+            "postcode": 1077,
+            "logos": {
+                "m": "medium/kekrozsa.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "A Menü",
+                "price": {
+                    "amount": "950",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Halászlé"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Göngyölt csirkemell Konyhafőnök módra petrezselymes burgonyával"
+                    }
+                ]
+            },
+            {
+                "name": "B Menü",
+                "price": {
+                    "amount": "950",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Frankfurti leves"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Rántott csirkemell zöldséges rizzsel"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "seoName": "baber-bisztro",
+            "name": "Babér Bisztró",
+            "location" : {
+               "lat" : 47.4967785,
+               "lng" : 19.0615448
+            },
+            "city": "Budapest",
+            "streetAddress": "Király utca 76.",
+            "phone": "+361 720 3328",
+            "postcode": 1068,
+            "logos": {
+                "m": "medium/baber.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "A Menü",
+                "price": {
+                    "amount": "950",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Pulykahúsleves gazdagon"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Borsós tokány, puliszka"
+                    }
+                ]
+            },
+            {
+                "name": "B Menü",
+                "price": {
+                    "amount": "950",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Csurgatott tojásleves"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Paradicsomos káposzta, fokhagymás sertéssült"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "seoName": "almasy-vendeglo",
+            "name": "Almásy Vendéglő",
+            "location" : {
+               "lat" : 47.5146514,
+               "lng" : 19.0327348
+            },
+            "city": "Budapest",
+            "streetAddress": "Rómer Flóris u. 12.",
+            "phone": "+361 315 1338",
+            "postcode": 1023,
+            "logos": {
+                "m": "medium/almasy.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "A Menü",
+                "price": {
+                    "amount": "890",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Karalábéleves"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Paprikás csirke galuskával"
+                    }
+                ]
+            },
+            {
+                "name": "B Menü",
+                "price": {
+                    "amount": "890",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Lebbencsleves kolbásszal"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Spenótfőzelék tükörtojással"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "seoName": "vendiak-etterem",
+            "name": "Véndiák étterem",
+            "location" : {
+               "lat" : 47.491013,
+               "lng" : 19.0589805
+            },
+            "city": "Budapest",
+            "streetAddress": "Egyetem tér 5.",
+            "phone": "+361 267 0226",
+            "postcode": 1053,
+            "logos": {
+                "m": "medium/vendiak.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "A Menü",
+                "price": {
+                    "amount": "980",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Francia hagymaleves sajtos krutonnal"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Vasi pecsenye fűszeres sárgaburgonyával"
+                    }
+                ]
+            },
+            {
+                "name": "B Menü",
+                "price": {
+                    "amount": "980",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Csülkös bableves tejfelesen"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Dubarry csirkemell burgonyapürével"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "seoName": "andras-pince-etterem",
+            "name": "András pince Étterem",
+            "location" : {
+               "lat" : 47.491013,
+               "lng" : 19.0589805
+            },
+            "city": "Budapest",
+            "streetAddress": "Kolosy tér 5-6.",
+            "phone": "+361 240 5761",
+            "postcode": 1036,
+            "logos": {
+                "m": "medium/andraspince.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "A Menü",
+                "price": {
+                    "amount": "980",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Francia hagymaleves sajtos krutonnal"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Vasi pecsenye fűszeres sárgaburgonyával"
+                    }
+                ]
+            },
+            {
+                "name": "B Menü",
+                "price": {
+                    "amount": "980",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Csülkös bableves tejfelesen"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Dubarry csirkemell burgonyapürével"
+                    }
+                ]
+            }
+        ]
     }
 ]
