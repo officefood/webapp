@@ -35,7 +35,7 @@
     <section id="{{item.restaurant.seoName}}" class="restaurant"
              ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope
              itemtype="http://schema.org/Restaurant">
-        <div class="logo rounded border"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
+        <div class="logo"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
 
         <div class="restaurantInfo">
             <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
