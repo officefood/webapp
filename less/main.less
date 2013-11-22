@@ -1,14 +1,12 @@
 /*   C O L O R S    */
 
-@backgroundDark: #605048;
-@backgroundLight: #fff8d9;
-@headingColor: #ffd393;
-@priceLabelBackground: #588d92;
-@priceLabelFont: #ffffff;
-@priceLabelBackground: #588d92;
-@priceLabelFont: #fff;
+@backgroundDark: #4E3F30;
+@backgroundLight: #F8F4E4;
+@headingColor: #dddddd;
+@priceLabelBackground: #A5B3AA;
+@priceLabelFont: #FEFEEB;
 @courseNameColor: #cecece;
-@restaurantName: #4f8502;
+@restaurantName: #A5B3AA;
 @restaurantInfo: #414141;
 
 /*   S T Y L E S    */
@@ -25,12 +23,15 @@ body {
 
 .mainHeader {
   background-color: @backgroundDark;
-  border-bottom: 2px solid #f3945f;
   color: @headingColor;
   padding: 0.75em;
+  margin: 2.5em 0;
+  background-image: url('../img/officefood_logo.png');
+  background-repeat: no-repeat;
+  text-indent: -9999px;
 
   h1 {
-    font-weight: bold;
+    font-weight: normal;
   }
 }
 
@@ -41,7 +42,7 @@ body {
 
 .priceTag {
   background-color: @priceLabelBackground;
-  border-radius: 0 .3em .3em 0;
+  border-radius: .3em;
   color: @priceLabelFont;
   padding: .5em 1em;
   position: relative;
@@ -54,35 +55,17 @@ body {
   content: '';
   position: absolute;
   display: block;
-  top: 0;
-  left: -1em;
+  top: .25em;
+  left: -.5em;
   height: 0;
   width: 0;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-right: 1em solid @priceLabelBackground;
-}
-
-.priceTag:after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: .3em;
-  width: .3em;
-  border-radius: 50%;
-  border: 1px solid @backgroundDark;
-  background-color: @backgroundLight;
-  top: 50%;
-  left: 0;
-  margin-top: -.15em;
-  margin-left: -.15em;
-  box-shadow: 0 0 0 .7px rgba(0, 0, 0, .4);
+  border-top: .75em solid transparent;
+  border-bottom: .75em solid transparent;
+  border-right: .5em solid @priceLabelBackground;
 }
 
 .restaurant {
-  background-color: #fff;
-  box-shadow: 3px 4px 4px rgba(0, 0, 0, .1);
-  border: 1px solid #e7e7e7;
+  background-color: #FEFEEB;
   margin: 1em 0.75em 1em 0.75em; /* 16px -> 1em, 12px -> 0.75 */
   padding: 0.875em; /* 14px / 16px */
   clear: both;
@@ -116,9 +99,9 @@ body {
 
   .restaurantName {
     color: @restaurantName;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 1.5em; /* 24/16 */
-    letter-spacing: -1px;
+    line-height: 1.5em;
   }
 
   .course {
@@ -137,12 +120,12 @@ body {
 
   .dishes {
     font-size: 0.875em;
-    font-weight: bold;
+    font-weight: normal;
   }
 
   .dish {
     margin: 0.3em 0;
-    line-height: 1.2;
+    line-height: 1.4;
   }
 
   .priceTag {
@@ -183,13 +166,12 @@ body {
 }
 
 .searchRestaurant {
-  margin: 1em 5%; /* 16px -> 1em, 12px -> 0.75 */
-  width: 80%;
-  padding: 10px 5px;
+  width: 90%;
+  padding: 10px 5%;
+  margin: 0;
   font-size: 0.875em;
-  font-weight: bold;
   border: 0;
-  border-radius: 10px;
+  color: lightgrey;
 
   &:focus {
     outline: 0;
@@ -198,16 +180,39 @@ body {
 }
 
 aside {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 20%;
   background-color: @backgroundDark;
-  height: 100%;
 }
 
 
+.menuItem {
+    display: block;
+    line-height: 4em;
+    color: @headingColor;
+    position: relative;
+    text-decoration: none;
+    padding: 0 0 0 1em;
+    text-shadow: 1px 1px rgba(0, 0, 0, .3);
+}
 
-
-
-
-
-
+.menuItem:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #999999;
+    opacity: .1;
+    z-index: 1;
+    transition: opacity linear .5s;
+}
+.menuItem:hover:before {
+    opacity: .2;
+}

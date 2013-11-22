@@ -14,17 +14,17 @@
     <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body ng-controller="MenuController" itemscope itemtype="http://schema.org/WebPage">
-<header class="mainHeader">
-    <span class="appName" itemprop="name">Officefood</span>
-
-    <h1 itemprop="description">Napi menü - Október 30</h1>
-</header>
 
 <aside>
+    <header class="mainHeader">
+        <span class="appName" itemprop="name">Officefood</span>
+    
+        <h1 itemprop="description">Napi menü - Október 30</h1>
+    </header>
     <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
     <nav ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">
         <!-- ngRepeat: item in filteredMenu = (menu | filter:searchRestaurant) -->
-        <a href="#{{item.restaurant.seoName}}">{{item.restaurant.name}}</a>
+        <a href="#{{item.restaurant.seoName}}" class="menuItem">{{item.restaurant.name}}</a>
     </nav>
 </aside>
 
@@ -33,8 +33,7 @@
     <section id="{{item.restaurant.seoName}}" class="restaurant"
              ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope
              itemtype="http://schema.org/Restaurant">
-        <div class="logo rounded border"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}"
-                                              alt="{{item.restaurant.name}} - logo"/></div>
+        <div class="logo rounded border"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
 
         <div class="restaurantInfo">
             <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
@@ -48,10 +47,10 @@
         </div>
         <section class="course" ng-repeat="course in item.menus">
             <header class="courseName">{{course.name}}</header>
+            <div class="priceTag">{{course.price.amount}}<span class="currency">{{course.price.currency}}</span></div>
             <ol class="dishes">
                 <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>
             </ol>
-            <div class="priceTag">{{course.price.amount}}<span class="currency">{{course.price.currency}}</span></div>
         </section
         <section ng-controller="TipController">
             <div ng-repeat="tip in tips.items">
