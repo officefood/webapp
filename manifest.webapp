@@ -3,7 +3,8 @@
   "description": "Daily restaurant menus for your FirefoxOS phone ",
   "launch_path": "/",
   "icons": {
-    "128": "/img/icon-128.png"
+    "128": "/img/icon-128.png",
+    "64": "/img/icon-64.png"
   },
   "developer": {
     "name": "Officefood Team",
