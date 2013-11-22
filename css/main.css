@@ -196,7 +196,7 @@ nav.closed {
   padding: 0 0 0 1em;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
-@media screen and (min-device-width: 481px) {
+@media screen and (min-width: 481px) {
   aside {
     position: fixed;
     top: 0;
