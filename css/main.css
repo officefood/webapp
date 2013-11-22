@@ -143,6 +143,8 @@ body {
   font-size: 0.875em;
   border: 0;
   color: lightgrey;
+  border-radius: 4px;
+  color: #777777;
 }
 .searchRestaurant:focus {
   outline: 0;
