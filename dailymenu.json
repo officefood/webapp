@@ -3,9 +3,9 @@
         "restaurant": {
             "seoName": "trinakria",
             "name": "Trinakria",
-            "coordinates": {
-                "longitude": "47.48606,19.07384",
-                "lattitude": "47.4858,19.074308"
+            "location": {
+                "latitude": "47.4861873",
+                "longitude": "19.0745502"
             },
             "city": "Budapest",
             "streetAddress": "Vajdahunyad utca 42",
@@ -56,6 +56,10 @@
         "restaurant": {
             "seoName": "10minutes",
             "name": "10 Minutes",
+            "location" : {
+               "lat" : 47.4855046,
+               "lng" : 19.0744718
+            },
             "city": "Budapest",
             "streetAddress": "Futó utca 47.",
             "phone": "+36207708299",
@@ -88,6 +92,10 @@
         "restaurant": {
             "seoName": "kompotbisztro",
             "name": "Kompót bisztró",
+            "location" : {
+               "lat" : 47.48572,
+               "lng" : 19.0760219
+            },
             "city": "Budapest",
             "streetAddress": "Corvin sétány 1/B",
             "phone": "+36207708299",
@@ -105,12 +113,48 @@
                 },
                 "dishes": [
                     {
-                        "type": "soup",
+                        "type": "appetizer",
                         "title": "Grillezett jégsaláta baconnal és zöldfűszeres tejföllel"
                     },
                     {
                         "type": "main",
                         "title": "Vörösboros pincepörkölt"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "restaurant": {
+            "seoName": "pizzaittallia",
+            "name": "Pizza Itt All Ia",
+            "location" : {
+               "lat" : 47.4850705,
+               "lng" : 19.0725643
+            },
+            "city": "Budapest",
+            "streetAddress": "Üllői út 50.",
+            "phone": "+361 210 1032",
+            "postcode": 1085,
+            "logos": {
+                "m": "medium/pizzaittallia.jpg"
+            }
+        },
+        "menus": [
+            {
+                "name": "Menü",
+                "price": {
+                    "amount": "850",
+                    "currency": "Ft"
+                },
+                "dishes": [
+                    {
+                        "type": "soup",
+                        "title": "Húsleves"
+                    },
+                    {
+                        "type": "main",
+                        "title": "Paprikás krumpli"
                     }
                 ]
             }
