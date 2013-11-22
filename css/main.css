@@ -134,6 +134,7 @@ body {
   font-size: 0.75em;
   /* 16px -> 1em, 12px -> 0.75 */
 
+  margin-left: 31.5%;
 }
 .restaurant address .icon:before {
   margin: 2px 4px;
@@ -193,7 +194,7 @@ nav.closed {
   padding: 0 0 0 1em;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
-@media screen and (min-device-width: 481px) {
+@media screen and (min-width: 481px) {
   aside {
     position: fixed;
     top: 0;
