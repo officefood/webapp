@@ -17,12 +17,15 @@
 
 <aside>
     <header class="mainHeader">
+        <img src="img/officefood-logo.png" alt="Officefood - napi menü ételajánlatok" />
         <span class="appName" itemprop="name">Officefood</span>
     
         <h1 itemprop="description">Napi menü - Október 30</h1>
+        
+        <a href="#nav" id="navigationToggler"></a>
     </header>
-    <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
     <nav>
+        <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
         <a href="#{{item.restaurant.seoName}}" class="menuItem" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">{{item.restaurant.name}}</a>
     </nav>
 </aside>
@@ -76,5 +79,6 @@
     ga('send', 'pageview');
 
 </script>
+<script src="application.js"></script>
 </body>
 </html>

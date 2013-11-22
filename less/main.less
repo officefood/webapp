@@ -28,8 +28,27 @@ body {
   background-repeat: no-repeat;
 
   h1 {
-    font-weight: normal;
+      display: none;
   }
+  span {
+      display: none;
+  }
+}
+
+#navigationToggler {
+    position: absolute;    
+    top: 10px;
+    right: 10px;
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: @priceLabelFont;
+    background-image: url('../img/icon/med/list.png');
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    box-shadow: 0 3px 2px rgba(0,0,0,.2);
+    opacity: .2;
 }
 
 .priceTag {
@@ -141,7 +160,7 @@ body {
     font-size: 0.75em; /* 16px -> 1em, 12px -> 0.75 */
     
     .icon:before {
-        margin: 1px 4px 0 0;
+        margin: 2px 4px;
     }
     
     .location {
@@ -167,9 +186,9 @@ body {
 }
 
 .searchRestaurant {
-  width: 90%;
+  width: 80%;
   padding: 10px 5%;
-  margin: 0;
+  margin: 1em 5% 0 5%;
   font-size: 0.875em;
   border: 0;
   color: lightgrey;
@@ -187,7 +206,19 @@ aside {
 }
 
 nav {
-    position: absoulute;
+    position: absolute;
+    width: 100%;
+    background-color: @backgroundDark;
+    z-index: 10;
+    visibility: hidden;
+    overflow: hidden;
+    transition: height 1s;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+nav.open,
+nav.closed {
+    visibility: visible;
 }
 
 .menuItem {
