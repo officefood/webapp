@@ -1,0 +1,13 @@
+{
+  "name": "Officefood",
+  "description": "Daily restaurant menus for your FirefoxOS phone ",
+  "launch_path": "/",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Officefood Team",
+    "url": "http://www.officefood.hu/team"
+  },
+  "default_locale": "hu"
+}
