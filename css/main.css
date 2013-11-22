@@ -9,7 +9,7 @@ body {
   font-size: 2.5em;
 }
 .mainHeader {
-  background-color: #4e3f30;
+  background-color: #453729;
   color: #dddddd;
   background-repeat: no-repeat;
 }
@@ -35,8 +35,8 @@ body {
   opacity: .2;
 }
 .priceTag {
-  background-color: #a5b3aa;
-  border-radius: .3em;
+  background-color: #96a491;
+  border-radius: .4em;
   color: #fefeeb;
   padding: .5em 1em;
   position: relative;
@@ -54,7 +54,7 @@ body {
   width: 0;
   border-top: .75em solid transparent;
   border-bottom: .75em solid transparent;
-  border-right: 0.5em solid #a5b3aa;
+  border-right: 0.5em solid #96a491;
 }
 .icon:before {
   content: '';
@@ -78,6 +78,7 @@ body {
   /* 14px / 16px */
 
   clear: both;
+  border: 1px solid #f0f0d4;
 }
 .restaurant:after {
   content: '';
@@ -93,6 +94,7 @@ body {
 .restaurant .logo img {
   max-width: 100%;
   margin-bottom: 1em;
+  border: 1px solid #998981;
 }
 .restaurant .restaurantInfo {
   color: #414141;
@@ -101,7 +103,7 @@ body {
   text-decoration: none;
 }
 .restaurant .restaurantName {
-  color: #a5b3aa;
+  color: #96a491;
   font-weight: normal;
   font-size: 1.5em;
   /* 24/16 */
@@ -128,9 +130,6 @@ body {
   margin: 0.3em 0;
   line-height: 1.4;
 }
-.restaurant .priceTag {
-  background-color: #a5b3aa;
-}
 .restaurant address {
   font-size: 0.75em;
   /* 16px -> 1em, 12px -> 0.75 */
@@ -150,7 +149,7 @@ body {
 }
 .restaurant address a {
   display: block;
-  background-color: #a5b3aa;
+  background-color: #96a491;
   line-height: 2em;
   border-radius: 4px;
   color: #fefeeb;
@@ -161,7 +160,6 @@ body {
   margin: 1em 5% 0 5%;
   font-size: 0.875em;
   border: 0;
-  color: lightgrey;
   border-radius: 4px;
   color: #777777;
 }
@@ -170,12 +168,12 @@ body {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.8) inset;
 }
 aside {
-  background-color: #4e3f30;
+  background-color: #453729;
 }
 nav {
   position: absolute;
   width: 100%;
-  background-color: #4e3f30;
+  background-color: #453729;
   z-index: 10;
   visibility: hidden;
   overflow: hidden;
@@ -202,7 +200,7 @@ nav.closed {
     left: 0;
     bottom: 0;
     width: 20%;
-    background-color: #4e3f30;
+    background-color: #453729;
   }
   .mainHeader {
     text-indent: -9999px;
