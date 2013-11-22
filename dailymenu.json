@@ -536,8 +536,8 @@
             "seoName": "andras-pince-etterem",
             "name": "András pince Étterem",
             "location" : {
-               "lat" : 47.491013,
-               "lng" : 19.0589805
+               "lat" : 47.5278187,
+               "lng" : 19.0380293
             },
             "city": "Budapest",
             "streetAddress": "Kolosy tér 5-6.",
@@ -551,7 +551,7 @@
             {
                 "name": "A Menü",
                 "price": {
-                    "amount": "980",
+                    "amount": "790",
                     "currency": "Ft"
                 },
                 "dishes": [
@@ -568,7 +568,7 @@
             {
                 "name": "B Menü",
                 "price": {
-                    "amount": "980",
+                    "amount": "790",
                     "currency": "Ft"
                 },
                 "dishes": [

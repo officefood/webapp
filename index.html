@@ -5,7 +5,7 @@
     <meta name="description" content="A Covin negyed környező éttermeinek napi menükínálata"/>
     <meta name="keywords" content="menü, napimenü, hetimenü, étterem ajánlat"/>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
     <script type="text/javascript" src="menuController.js"></script>
     <script type="text/javascript" src="tipController.js"></script>
@@ -53,7 +53,7 @@
             <ol class="dishes">
                 <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>
             </ol>
-        </section
+        </section>
         <section ng-controller="TipController">
             <div ng-repeat="tip in tips.items">
                 huha
