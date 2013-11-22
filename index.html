@@ -22,9 +22,8 @@
         <h1 itemprop="description">Napi menü - Október 30</h1>
     </header>
     <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
-    <nav ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">
-        <!-- ngRepeat: item in filteredMenu = (menu | filter:searchRestaurant) -->
-        <a href="#{{item.restaurant.seoName}}" class="menuItem">{{item.restaurant.name}}</a>
+    <nav>
+        <a href="#{{item.restaurant.seoName}}" class="menuItem" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">{{item.restaurant.name}}</a>
     </nav>
 </aside>
 
@@ -38,11 +37,11 @@
         <div class="restaurantInfo">
             <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
             <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <a class="location" href="#">
+                <a class="location icon" href="#">
                     <span class="city" itemprop="addressLocality">{{item.restaurant.city}}</span>
                     <span class="streetAddress" itemprop="streetAddress">{{item.restaurant.streetAddress}}</span>
                 </a>
-                <a class="phoneNumber" href="tel:{{item.restaurant.phone}}" itemprop="telephone">{{item.restaurant.phone}}</a>
+                <a class="phoneNumber icon" href="tel:{{item.restaurant.phone}}" itemprop="telephone">{{item.restaurant.phone}}</a>
             </address>
         </div>
         <section class="course" ng-repeat="course in item.menus">
