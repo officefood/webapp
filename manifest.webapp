@@ -11,5 +11,10 @@
     "name": "Officefood Team",
     "url": "http://www.officefood.hu/team"
   },
-  "default_locale": "hu"
+  "default_locale": "hu",
+  "permissions": {
+    "geolocation": {
+      "description": "Marking out user location"
+    }
+  }
 }
