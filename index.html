@@ -5,7 +5,7 @@
     <meta name="description" content="A Covin negyed környező éttermeinek napi menükínálata"/>
     <meta name="keywords" content="menü, napimenü, hetimenü, étterem ajánlat"/>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
     <script type="text/javascript" src="menuController.js"></script>
     <script type="text/javascript" src="tipController.js"></script>
@@ -35,7 +35,7 @@
     <section id="{{item.restaurant.seoName}}" class="restaurant"
              ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope
              itemtype="http://schema.org/Restaurant">
-        <div class="logo rounded border"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
+        <div class="logo"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
 
         <div class="restaurantInfo">
             <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
@@ -53,6 +53,11 @@
             <ol class="dishes">
                 <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>
             </ol>
+        </section>
+        <section ng-controller="TipController">
+            <div ng-repeat="tip in tips.items">
+                huha
+            </div>
         </section>
     </section>
 </div>
