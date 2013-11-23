@@ -16,9 +16,8 @@ window.setTimeout(function () {
             }
         }
     );
-}, 1000);
-
-(function () {
+        
+    (function () {
     function distanceFrom(points) {
         var lat1 = points.lat1;
         var radianLat1 = lat1 * (Math.PI / 180);
@@ -75,3 +74,5 @@ window.setTimeout(function () {
         navigator.geolocation.getCurrentPosition(locationSuccess, locationFailure);
     }
 }());
+    
+}, 1000);
