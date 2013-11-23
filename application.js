@@ -49,15 +49,18 @@ window.setTimeout(function () {
             element = elements[i];
             
             parts = element.innerHTML.split('|');
-            distance = distanceFrom(
-                {
-                    lat1: parts[0],
-                    lng1: parts[1],
-                    lat2: latitude,
-                    lng2: longitude
-                }
-            );
-            element.innerHTML = distance + ' km';
+            if (parts.length === 2) {
+                distance = distanceFrom(
+                    {
+                        lat1: parts[0],
+                        lng1: parts[1],
+                        lat2: latitude,
+                        lng2: longitude
+                    }
+                );
+
+                element.innerHTML = distance + ' km';
+            }
         }
     };
     
