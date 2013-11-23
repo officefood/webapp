@@ -1,17 +1,7 @@
 CACHE MANIFEST
-# Version 0.102
- 
-index.html
+# Version 0.111
+
 js/lib/angular.js
-css/reset.css
-css/main.css
-application.js
-menuController.js
-img/icon-original.png
-img/icon-60.png
-img/icon-64.png
-img/icon-128.png
-img/icon-256.png
 img/officefood_sprite.png
 img/officefood-logo.png
 img/icon/med/list.png
