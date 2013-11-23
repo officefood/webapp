@@ -17,6 +17,53 @@ window.setTimeout(function () {
         }
     );
         
+    var uploadLinks = document.querySelectorAll('.uploadImage'),
+        i = 0;
+
+    for (;i < uploadLinks.length; i += 1) {
+            element = uploadLinks[i];
+            
+            element.addEventListener(
+                'click',
+                function(event) {
+                    event.preventDefault();
+                    
+                    if (typeof MozActivity  === "function") {
+                     var pick = new MozActivity({
+                        name: "pick",
+                        data: {
+                            type: ["image/png", "image/jpg", "image/jpeg"]
+                         }
+                    });
+                            
+                    pick.onsuccess(function () {
+                        var placeHolder = document.querySelector('.imagePlaceHolder'),
+                            img;
+                           
+                        alert('Yeehaaa');
+                        if (this.result.blob.type.indexOf('image') !== -1) {
+                            img = document.createElement('img');
+                            img.src = window.URL.createObjectURL(this.result.blob);
+
+                            placeHolder.appendChild(img);
+                        }
+                    }); 
+                    
+                    pick.onerror(function () {
+                        alert('Yey, how cool error it is!');
+                    });
+
+                    
+                    }
+                }
+
+            );
+        
+    }
+            
+                
+
+        
     (function () {
     function distanceFrom(points) {
         var lat1 = points.lat1;

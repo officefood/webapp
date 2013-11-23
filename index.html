@@ -33,7 +33,7 @@
 
 <div class="restaurants">
     <section id="{{item.restaurant.seoName}}" class="restaurant" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope itemtype="http://schema.org/Restaurant">
-        <div class="logo fancyShadow"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
+        <div class="logo"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
 
         <div class="restaurantInfo">
             <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
@@ -49,12 +49,14 @@
         <section class="course" ng-repeat="course in item.menus">
             <header class="courseName">{{course.name}}</header>
             <div class="priceTag">{{course.price.amount}}<span class="currency">{{course.price.currency}}</span></div>
+            <a href="#" class="uploadImage">Upload</a>
             <ol class="dishes">
                 <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>
             </ol>
         </section>
         <section class="additionalActions">
             <a class="sendSMS hidden" href="#" data-sms-text="We're going to eat in the {{item.restaurant.name}}">Invite via SMS</a>
+			<div class="imagePlaceHolder"></div>
         </section>
     </section>
 </div>
