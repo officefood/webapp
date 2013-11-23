@@ -4,7 +4,7 @@ function TipController($scope, $http) {
         VENUE_ID = '4d551ea816a6b60cf2fa46f8';
 
     $http.get(
-        'https://api.foursquare.com/v2/venues/' + VENUE_ID + '/tips',
+        'http://api.foursquare.com/v2/venues/' + VENUE_ID + '/tips',
         {
             client_id: CLIENT_ID,
             client_secret: CLIENT_SECRET

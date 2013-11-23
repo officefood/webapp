@@ -25,17 +25,15 @@
         <a href="#nav" id="navigationToggler"></a>
     </header>
     <nav>
-        <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés...">
+        <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés..." />
         <a href="#{{item.restaurant.seoName}}" class="menuItem" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">{{item.restaurant.name}}</a>
     </nav>
 </aside>
 
 
 <div class="restaurants">
-    <section id="{{item.restaurant.seoName}}" class="restaurant"
-             ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope
-             itemtype="http://schema.org/Restaurant">
-        <div class="logo"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
+    <section id="{{item.restaurant.seoName}}" class="restaurant" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope itemtype="http://schema.org/Restaurant">
+        <div class="logo fancyShadow"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
 
         <div class="restaurantInfo">
             <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
@@ -43,8 +41,9 @@
                 <a class="location icon" href="#">
                     <span class="city" itemprop="addressLocality">{{item.restaurant.city}}</span>
                     <span class="streetAddress" itemprop="streetAddress">{{item.restaurant.streetAddress}}</span>
+                    <span class="distance hidden">{{item.restaurant.location.latitude}}|{{item.restaurant.location.longitude}}</span>
                 </a>
-                <a class="phoneNumber icon" href="tel:{{item.restaurant.phone}}" itemprop="telephone">{{item.restaurant.phone}}</a>
+                <a class="phoneNumber icon" ng-href="tel:{{item.restaurant.phone}}" itemprop="telephone">{{item.restaurant.phone}}</a>
             </address>
         </div>
         <section class="course" ng-repeat="course in item.menus">
@@ -53,11 +52,6 @@
             <ol class="dishes">
                 <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>
             </ol>
-        </section>
-        <section ng-controller="TipController">
-            <div ng-repeat="tip in tips.items">
-                huha
-            </div>
         </section>
     </section>
 </div>

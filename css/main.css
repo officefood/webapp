@@ -191,6 +191,50 @@ nav.closed {
   padding: 0 0 0 1em;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
+.fancyShadow {
+  position: relative;
+  z-index: 1;
+}
+.distance {
+  display: block;
+  background: #fefeeb;
+  color: black;
+  padding: 2px .5em;
+  line-height: 1.3em;
+  font-size: 1.2em;
+  color: #453729;
+  opacity: .7;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.fancyShadow:before,
+.fancyShadow:after {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  bottom: 19px;
+  width: 50%;
+  top: 80%;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.7);
+}
+.fancyShadow:before {
+  left: 10px;
+  transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+}
+.fancyShadow:after {
+  right: 10px;
+  transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+}
 @media screen and (min-width: 481px) {
   aside {
     position: fixed;
