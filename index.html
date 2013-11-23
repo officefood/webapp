@@ -38,7 +38,7 @@
         <div class="restaurantInfo">
             <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
             <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <a class="location icon" href="#">
+                <a class="location icon" href="http://maps.google.com/?q={{item.restaurant.location.latitude}},{{item.restaurant.location.longitude}}">
                     <span class="city" itemprop="addressLocality">{{item.restaurant.city}}</span>
                     <span class="streetAddress" itemprop="streetAddress">{{item.restaurant.streetAddress}}</span>
                     <span class="distance hidden">{{item.restaurant.location.latitude}}|{{item.restaurant.location.longitude}}</span>
