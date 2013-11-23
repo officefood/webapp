@@ -71,7 +71,7 @@ window.setTimeout(function () {
     };
 
     if (navigator && navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(locationSuccess, locationFailure);
+        navigator.geolocation.watchPosition(locationSuccess, locationFailure);
     }
 }());
     
