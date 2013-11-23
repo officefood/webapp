@@ -53,6 +53,9 @@
                 <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>
             </ol>
         </section>
+        <section class="additionalActions">
+            <a class="sendSMS hidden" href="#" data-sms-text="We're going to eat in the {{item.restaurant.name}}">Invite via SMS</a>
+        </section>
     </section>
 </div>
 <h2 ng-show="!filteredMenu.length">Nincs találat</h2>

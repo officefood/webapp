@@ -76,6 +76,30 @@ window.setTimeout(function () {
     if (navigator && navigator.geolocation) {
         navigator.geolocation.watchPosition(locationSuccess, locationFailure);
     }
-}());
+    }());
+    
+    // init SMS sender
+    (function () {
+        if (navigator.mozApps && window.MozActivity) {
+            var buttons = document.querySelectorAll('.sendSMS'),
+                i;
+            for (i = 0; i < buttons.length; i++) {
+                (function () {
+                    var button = buttons[i];
+                    button.classList.remove('hidden');
+                    button.onclick = function (e) {
+                        var bodyText = button.dataset && button.dataset['smsText'],
+                            sms = bodyText && new MozActivity({
+                                name: "new", // Possible compose-sms in future versions
+                                data: {
+                                    type: "websms/sms",
+                                    body: bodyText
+                                }
+                            });
+                    };
+                }());
+            }
+        }
+    }());
     
 }, 1000);
