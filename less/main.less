@@ -187,7 +187,7 @@ body {
 .searchRestaurant {
   width: 80%;
   padding: 10px 5%;
-  margin: 1em 5% 0 5%;
+  margin: 1em 5% 1em 5%;
   font-size: 0.875em;
   border: 0;
   border-radius: 4px;
@@ -200,28 +200,26 @@ body {
 }
 
 nav {
-    position: absolute;
     width: 100%;
     background-color: @backgroundDark;
-    z-index: 10;
-    visibility: hidden;
-    overflow: hidden;
-    transition: height 1s;
-    box-shadow: 0 2px 5px rgba(0,0,0,.2);
-}
+    display: none;
 
-nav.open,
-nav.closed {
-    visibility: visible;
+    .open {
+      display: block;
+    }
+
+    .closed {
+      display: none;
+    }
 }
 
 .menuItem {
     display: block;
-    line-height: 4em;
+    line-height: 1.4em;
     color: @headingColor;
     position: relative;
     text-decoration: none;
-    padding: 0 0 0 1em;
+    padding: 1em 0.5em 1em 1em;
     text-shadow: 1px 1px rgba(0, 0, 0, .3);
 }
 
@@ -280,10 +278,14 @@ nav.closed {
       top: 0;
       left: 0;
       bottom: 0;
-      width: 20%;
+      width: 25%;
       background-color: @backgroundDark;
     }
     
+    nav {
+      display: block;
+    }
+
     .mainHeader {
         text-indent: -9999px;
     }
@@ -307,7 +309,8 @@ nav.closed {
     }
     
     .restaurants {
-        left: 20%;
+        left: 25%;
         position: absolute;
+        right: 0;
     }
 }

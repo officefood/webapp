@@ -1,3 +1,4 @@
+
 window.setTimeout(function () {
     var navigationElement = document.getElementsByTagName('nav')[0],
         originalHeight = navigationElement.offsetHeight;
@@ -16,7 +17,7 @@ window.setTimeout(function () {
             }
         }
     );
-        
+
     var uploadLinks = document.querySelectorAll('.uploadImage'),
         i = 0;
 
