@@ -1,5 +1,5 @@
 function MenuController($scope, $http) {
-    $http.get('dailymenu.json').success(
+    $http.get('//api.officefood.hu/dailymenu.json').success(
         function (data) {
             $scope.menu = data;
         }

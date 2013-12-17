@@ -19,9 +19,9 @@
     <header class="mainHeader">
         <img src="img/officefood-logo.png" alt="Officefood - napi menü ételajánlatok" />
         <span class="appName" itemprop="name">Officefood</span>
-    
+
         <h1 itemprop="description">Napi menü - November 22.</h1>
-        
+
         <a href="#nav" id="navigationToggler"></a>
     </header>
     <nav>
@@ -46,18 +46,20 @@
                 <a class="phoneNumber icon" ng-href="tel:{{item.restaurant.phone}}" itemprop="telephone">{{item.restaurant.phone}}</a>
             </address>
         </div>
-        <section class="course" ng-repeat="course in item.menus">
-            <header class="courseName">{{course.name}}</header>
-            <div class="priceTag">{{course.price.amount}}<span class="currency">{{course.price.currency}}</span></div>
-            <a href="#" class="uploadImage">Upload</a>
+        <section class="course" ng-repeat="menu in item.menus">
+            <header class="courseName">{{menu.name}}</header>
+            <div class="priceTag">{{menu.price.amount}}<span class="currency">{{menu.price.currency}}</span></div>
+            <!--<a href="#" class="uploadImage">Upload</a>-->
             <ol class="dishes">
-                <li class="dish" ng-repeat="dish in course.dishes" itemprop="menu">{{dish.title}}</li>
+                <li class="dish" itemprop="menu">{{menu.items}}</li>
             </ol>
         </section>
+        <!--
         <section class="additionalActions">
             <a class="sendSMS hidden" href="#" data-sms-text="We're going to eat in the {{item.restaurant.name}}">Invite via SMS</a>
-			<div class="imagePlaceHolder"></div>
+            <div class="imagePlaceHolder"></div>
         </section>
+        -->
     </section>
 </div>
 <h2 ng-show="!filteredMenu.length">Nincs találat</h2>
