@@ -1,0 +1,226 @@
+@color1st: #f4f4f4;
+@color2nd: #00DBEE;
+@color3rd: #333333;
+@color4th: #ffffff;
+@color5th: #999999;
+
+@raster: 10px;
+@rasterH: 1.041666%;
+
+@fontSizeSmall: 12/14em;
+@fontSizeMedium: 16/14em;
+@fontSizeBig: 30/14em;
+
+@fontSans: 'Droid Sans', sans-serif;
+@fontSerif: 'Droid Serif', serif;
+
+body {
+    font-size: 14px;
+    background: @color1st;
+    font-family: @fontSans;
+}
+
+#content {
+    max-width: 960px;
+    position: relative;
+}
+
+.mainHeader {
+    margin: 10px 0;
+    line-height: 30px;
+    background-color: @color2nd;
+    font-size: @fontSizeMedium;
+    color: @color4th;
+    > h1 {
+        display: block;
+        float: left;
+        line-height: inherit;
+        padding: 0 10*100/960%;
+        font-family: @fontSerif;
+    }
+    .appName {
+        display: block;
+        float: left;
+        width: 230*100/960%;
+        padding: 0 10*100/960%;
+        font-family: @fontSerif;
+        background-color: @color3rd;  
+    }
+    .searchRestaurant {
+        float: left;
+        width: 160*100/960%;
+        background-color: @color5th;
+        height: 30px;
+        margin: 0;
+        padding: 0 10*100/960%;
+        border: 0;
+        outline: 0;
+        color: @color4th;
+        &:focus {
+            outline: 0;
+        }
+        &::-webkit-input-placeholder {
+            color: @color4th;
+        }
+        &:-moz-placeholder {
+            color: @color4th;
+        }
+        &::-moz-placeholder {
+            color: @color4th;
+        }
+        &:-ms-input-placeholder {
+            color: @color4th;
+        }
+    }
+    &:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+aside {
+    float: left;
+    width: 230*100/960%;
+    background-color: @color4th;
+    margin-left: 10*100/960%;
+    h1 {
+        color: @color4th;
+        background-color: @color2nd;
+        line-height: 30px;
+        font-size: @fontSizeMedium;
+        margin-bottom: @raster;
+        padding: 0 @raster;
+    }
+    nav {
+        border-top: 1px solid @color1st;
+        > .menuItem {
+            display: block;
+            line-height: 30px;
+            border-bottom: 1px solid @color1st;
+            color: @color5th;
+            text-decoration: none;
+            padding: 0 @raster;
+            transition: background .5s;
+            &:hover {
+                color: @color1st;
+                background-color: @color3rd;
+            }
+        }
+    }
+}
+
+.restaurants{
+    float: left;
+    width: 690*100/960%;
+    margin-left: 20*100/960%;
+    margin-right: @rasterH;
+}
+
+.restaurant {
+    position: relative;
+    background-color: @color4th;
+    margin-bottom: @raster;
+    .logo {
+        display: block;
+        float: left;
+        width: 4.285714rem;
+        height: 4.285714em;
+        margin: @raster;
+        img {
+            width: 100%;
+        }
+    }
+
+    .restaurantInfo {
+        width: 50%;
+        margin-bottom: @raster;
+        .restaurantName {
+            padding-top: @raster;
+            font-size: @fontSizeBig;
+            line-height: 2.285714rem;
+            font-family: @fontSerif;
+            color: @color3rd;
+        }
+        address {
+            font-size: @fontSizeSmall;
+            line-height: 1rem;
+            > a {
+                display: block;
+                text-decoration: none;
+                color: @color5th;
+                
+            }
+            .phoneNumber {
+                color: @color2nd;
+            }
+            .distance {
+                display: none;
+            }
+        }
+        &:after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+
+    .course {
+        width: 50%;
+        header {
+            display: block;
+            float: left;
+            margin-left: -10*100/345%;
+            padding-left: 10*100/345%;
+            line-height: 30px;
+            width: 170*100/345%;
+            background-color: @color3rd;  
+            color: @color4th;
+        }
+        .priceTag {
+            display: block;
+            float: left;
+            left: 24.637681%;
+            line-height: 30px;
+            width: 170*100/345%;
+            background-color: @color2nd;
+            color: @color4th;
+            text-align: center;
+            .amount {
+                display: inline-block;
+                width: 64.705882%;
+            }
+            .currency {
+                display: inline-block;
+                width: 35.294218%;
+                background-color: @color1st;
+                color: @color3rd;
+            }
+        }
+        .dishes {
+            clear: both;
+            font-size: @fontSizeMedium;
+            padding: @raster 10*100/345%;
+            font-family: @fontSerif;
+            line-height: 1.8em;
+            color: @color3rd;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    aside {
+        display: none;
+    }
+    .restaurants{
+        float: none;
+        margin: 0 @rasterH;
+        width: auto;
+        .restaurantInfo {
+            width: 100%;
+        }
+        .course {
+            width: 100%;
+        }
+    }
+}

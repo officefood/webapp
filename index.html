@@ -9,60 +9,60 @@
     <script src="js/lib/angular.js"></script>
     <script type="text/javascript" src="menuController.js"></script>
     <script type="text/javascript" src="tipController.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body ng-controller="MenuController" itemscope itemtype="http://schema.org/WebPage">
-
-<aside>
+<div id="content">
     <header class="mainHeader">
-        <img src="img/officefood-logo.png" alt="Officefood - napi menü ételajánlatok" />
         <span class="appName" itemprop="name">Officefood</span>
-
-        <h1 itemprop="description">Napi menü - November 22.</h1>
-
-        <a href="#nav" id="navigationToggler"></a>
-    </header>
-    <nav>
         <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés..." />
-        <a href="#{{item.restaurant.seoName}}" class="menuItem" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">{{item.restaurant.name}}</a>
-    </nav>
-</aside>
+        <h1 itemprop="description">Napi menü - November 22.</h1>
+    </header>
+
+    <aside>
+        <h1>Éttermek</h1>
+        <nav>
+            <a href="#{{item.restaurant.seoName}}" class="menuItem" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">{{item.restaurant.name}}</a>
+        </nav>
+    </aside>
 
 
-<div class="restaurants">
-    <section id="{{item.restaurant.seoName}}" class="restaurant" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope itemtype="http://schema.org/Restaurant">
-        <div class="logo"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
+    <div class="restaurants">
+        <section id="{{item.restaurant.seoName}}" class="restaurant" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope itemtype="http://schema.org/Restaurant">
+            <div class="logo"><img ng-src="img/restaurant-logos/{{item.restaurant.logos.m}}" alt="{{item.restaurant.name}} - logo"/></div>
 
-        <div class="restaurantInfo">
-            <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
-            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <a class="location icon" href="http://maps.google.com/?q={{item.restaurant.location.latitude}},{{item.restaurant.location.longitude}}">
-                    <span class="city" itemprop="addressLocality">{{item.restaurant.city}}</span>
-                    <span class="streetAddress" itemprop="streetAddress">{{item.restaurant.streetAddress}}</span>
-                    <span class="distance hidden">{{item.restaurant.location.latitude}}|{{item.restaurant.location.longitude}}</span>
-                </a>
-                <a class="phoneNumber icon" ng-href="tel:{{item.restaurant.phone}}" itemprop="telephone">{{item.restaurant.phone}}</a>
-            </address>
-        </div>
-        <section class="course" ng-repeat="menu in item.menus">
-            <header class="courseName">{{menu.name}}</header>
-            <div class="priceTag">{{menu.price.amount}}<span class="currency">{{menu.price.currency}}</span></div>
-            <!--<a href="#" class="uploadImage">Upload</a>-->
-            <ol class="dishes">
-                <li class="dish" itemprop="menu">{{menu.items}}</li>
-            </ol>
+            <div class="restaurantInfo">
+                <h1 class="restaurantName" itemprop="name">{{item.restaurant.name}}</h1>
+                <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <a class="location icon" href="http://maps.google.com/?q={{item.restaurant.location.latitude}},{{item.restaurant.location.longitude}}">
+                        <span class="city" itemprop="addressLocality">{{item.restaurant.city}}</span>
+                        <span class="streetAddress" itemprop="streetAddress">{{item.restaurant.streetAddress}}</span>
+                        <span class="distance hidden">{{item.restaurant.location.latitude}}|{{item.restaurant.location.longitude}}</span>
+                    </a>
+                    <a class="phoneNumber icon" ng-href="tel:{{item.restaurant.phone}}" itemprop="telephone">{{item.restaurant.phone}}</a>
+                </address>
+            </div>
+            <section class="course" ng-repeat="menu in item.menus">
+                <header class="courseName">{{menu.name}}</header>
+                <div class="priceTag"><span class="amount">{{menu.price.amount}}</span><span class="currency">{{menu.price.currency}}</span></div>
+                <!--<a href="#" class="uploadImage">Upload</a>-->
+                <ol class="dishes">
+                    <li class="dish" itemprop="menu">{{menu.items}}</li>
+                </ol>
+            </section>
+            <!--
+            <section class="additionalActions">
+                <a class="sendSMS hidden" href="#" data-sms-text="We're going to eat in the {{item.restaurant.name}}">Invite via SMS</a>
+                <div class="imagePlaceHolder"></div>
+            </section>
+            -->
         </section>
-        <!--
-        <section class="additionalActions">
-            <a class="sendSMS hidden" href="#" data-sms-text="We're going to eat in the {{item.restaurant.name}}">Invite via SMS</a>
-            <div class="imagePlaceHolder"></div>
-        </section>
-        -->
-    </section>
+    </div>
+    <h2 ng-show="!filteredMenu.length">Nincs találat</h2>
 </div>
-<h2 ng-show="!filteredMenu.length">Nincs találat</h2>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
