@@ -110,6 +110,8 @@ aside nav > .menuItem:hover {
 }
 .restaurant .logo img {
   width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .restaurant .restaurantInfo {
   width: 50%;
@@ -154,6 +156,7 @@ aside nav > .menuItem:hover {
   width: 49.27536231884058%;
   background-color: #333333;
   color: #ffffff;
+  font-size: 1.2em;
 }
 .restaurant .course .priceTag {
   display: block;
@@ -164,6 +167,7 @@ aside nav > .menuItem:hover {
   background-color: #00dbee;
   color: #ffffff;
   text-align: center;
+  font-size: 1.2em;
 }
 .restaurant .course .priceTag .amount {
   display: inline-block;
@@ -189,13 +193,23 @@ aside nav > .menuItem:hover {
   }
   .restaurants {
     float: none;
-    margin: 0 1.041666%;
+    margin: 0;
     width: auto;
   }
+  .restaurants .restaurant .logo {
+    width: 26%;
+    height: auto;
+    margin: 2%;
+  }
   .restaurants .restaurantInfo {
-    width: 100%;
+    width: 70%;
+    margin: 0 0 0 30%;
   }
   .restaurants .course {
     width: 100%;
+  }
+  .restaurants .course header {
+    margin-left: 0;
+    width: 46.3768115942029%;
   }
 }

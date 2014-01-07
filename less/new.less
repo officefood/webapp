@@ -129,6 +129,8 @@ aside {
         margin: @raster;
         img {
             width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 0 5px rgba(0,0,0,0.1);
         }
     }
 
@@ -176,6 +178,7 @@ aside {
             width: 170*100/345%;
             background-color: @color3rd;  
             color: @color4th;
+            font-size: 1.2em;
         }
         .priceTag {
             display: block;
@@ -186,6 +189,7 @@ aside {
             background-color: @color2nd;
             color: @color4th;
             text-align: center;
+            font-size: 1.2em;
             .amount {
                 display: inline-block;
                 width: 64.705882%;
@@ -214,13 +218,25 @@ aside {
     }
     .restaurants{
         float: none;
-        margin: 0 @rasterH;
+        margin: 0;
         width: auto;
+        .restaurant {
+            .logo {
+                width: 26%;
+                height: auto;
+                margin: 2%;
+            }
+        }
         .restaurantInfo {
-            width: 100%;
+            width: 70%;
+            margin: 0 0 0 30%;
         }
         .course {
             width: 100%;
+            header {
+                margin-left: 0;
+                width: 160*100/345%;
+            }
         }
     }
 }

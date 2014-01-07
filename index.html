@@ -17,8 +17,8 @@
 <div id="content">
     <header class="mainHeader">
         <span class="appName" itemprop="name">Officefood</span>
-        <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Gyorskeresés..." />
-        <h1 itemprop="description">Napi menü - November 22.</h1>
+        <input ng-model="searchRestaurant" class="searchRestaurant" placeholder="Keresés.." />
+        <h1 itemprop="description">Napi menü</h1>
     </header>
 
     <aside>
@@ -27,7 +27,6 @@
             <a href="#{{item.restaurant.seoName}}" class="menuItem" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)">{{item.restaurant.name}}</a>
         </nav>
     </aside>
-
 
     <div class="restaurants">
         <section id="{{item.restaurant.seoName}}" class="restaurant" ng-repeat="item in filteredMenu = (menu | filter:searchRestaurant)" itemscope itemtype="http://schema.org/Restaurant">
